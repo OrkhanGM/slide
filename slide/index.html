@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="welcome">İçəri Şəhərə xoş gəlmişsiniz!</div>
+	<div id="container">
+	<img class="slide" src="image/1.jpg">
+	<img class="slide" src="image/2.jpg">
+	<img class="slide" src="image/3.jpg">
+	<img class="slide" src="image/4.jpg">
+	<button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>>
+	<button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;</button> 
+	</div>
+
+</body>
+
+<script >
+	var index =1;
+
+	function plusIndex(n){
+		index = index+1;
+		showImage(index);
+	}
+
+	showImage(1);
+ 
+	function showImage(n){
+    var i; 
+		var x=document.getElementsByClassName("slide");
+		if(n > x.length){index = 1};
+		if(n<1){index = x.length}; 
+
+		for (i=0; i<x.length; i++)
+		 {
+			x[i].style.display = "none";
+		 }
+
+x[index-1].style.display = "block";
+
+	}
+</script>
+
+</html>
